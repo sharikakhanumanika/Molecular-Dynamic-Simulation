@@ -1,6 +1,6 @@
 
 ----INSTALL UBUNTU-----
-UPGRADE AND UPDATE LIBRARIES OF UBUNTU BY FOLLOWING COMMANDS
+UPGRADE AND UPDATE LIBRARIES OF UBUNTU BY FOLLOWING THE COMMANDS
 
 Commands:
 sudo apt update
@@ -86,7 +86,7 @@ open the topol.top
 below- Include forcefield parameters
 #include "amberGS.ff/forcefield.itp")
 
-AT THE BOTTOM OF THE SAME FILE PERFORM FOLLOWING CHANGES
+AT THE BOTTOM OF THE SAME FILE, PERFORM THE FOLLOWING CHANGES
 (add LIG 1
 align exactly below-
 Protein_chain_E     1)
@@ -101,7 +101,7 @@ TO
 [ moleculetype ]
 ; Name nrexcl
 LIG 3
-(in certain cases this will already be LIG 3 so for such case no change is needed)
+(In certain cases, this will already be LIG 3, so for such cases, no change is needed)
 
 ----------------------------------------------------------------------------------------
 
@@ -152,7 +152,7 @@ Now, open topol.top file
 		#include "posre_LIG.itp"
 		#endif
 
-Again, Make other Index file for System 
+Again, make another index file for the system 
 
 gmx make_ndx -f EM.gro -o index.ndx
 	
@@ -172,8 +172,7 @@ gmx make_ndx -f EM.gro -o index.ndx
 
   gmx grompp -f MD.mdp -c NPT.gro -t NPT.cpt -p topol.top -n index.ndx -maxwarn 2 -o MD.tpr
   gmx mdrun -deffnm MD
-               or
-gmx mdrun -deffnm MD -cpi MD.cpt
+               
 
 
 
